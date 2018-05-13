@@ -1,0 +1,46 @@
+$bg-color: #181818;
+$txt-color: #0f8;
+@import url('https://fonts.googleapis.com/css?family=Ubuntu+Mono');
+
+body {
+    background-color: $bg-color;
+    color: $txt-color;
+    font-family: 'Ubuntu Mono';
+}
+
+.terminal {
+    padding: 2em;
+    font-size: 1.4em;
+    
+    .include-list > div {
+        span {
+            background-color: darken($txt-color, 40);
+            font-weight: normal;
+            font-size: 85%;
+            text-align: left;
+            width: 8em;
+        }
+    }
+
+    div {
+        clear: both;
+        float: left;
+        line-height: 1.4em;
+    }
+
+    .last {
+        padding-right: .5em;
+        height: 1.2em;
+        border-right: $txt-color 8px solid;
+        animation: blink 1s steps(1) infinite;
+    }
+}
+
+@keyframes blink {    
+    from, to {    
+        border-color: transparent;
+    }    
+    50% {    
+        border-color: $txt-color;
+    }    
+}    

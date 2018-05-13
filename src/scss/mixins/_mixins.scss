@@ -1,0 +1,37 @@
+// custom mixins
+
+@mixin inline-li {
+    float:left;
+
+    &:not(:last-child) {
+      margin-right: $list-inline-padding;
+    }
+}
+
+@mixin regular-font {
+    font-weight: 400;
+}
+
+@mixin regular-italic-font {
+    font-weight: 400;
+    font-style: italic;
+}
+
+@mixin semi-bold-font {
+    font-weight: 600;
+}
+
+@mixin bold-font {
+    font-weight: 700;
+}
+
+@mixin media-vertical-breakpoint-down($name, $breakpoints: $vertical-breakpoints) {
+    $max: breakpoint-max($name, $breakpoints);
+    @if $max {
+      @media (max-height: $max) {
+        @content;
+      }
+    } @else {
+      @content;
+    }
+}

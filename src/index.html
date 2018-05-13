@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Muli:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+    <title>Bootstrap 4 -ts- Starter Theme</title>
+</head>
+
+<body>
+    <div class="terminal">
+        <div>Lucas: ts-bootstrap-scss-boilerplate 🚀</div>
+        <div class="date">date</div>
+        <div class="mb-3 mt-2">
+            <div>Este boilerplate incluye: </div>
+            <div class="include-list">
+                <div class="pl-2"> - Compilador TS con bundles vía webpack</div>
+                <div class="pl-2"> - Compilador SCSS</div>
+                <div class="pl-2"> - BrowserSync (para recargar automaticamente los browser cuando hay cambios de código)</div>
+                <div class="pl-2"> - Minimización y uglyficación</div>
+                <div class="pl-2"> - GULP</div>
+                <div class="pl-4 mt-2">Comandos: </div>
+                <div class="pl-5"><span class="badge badge-secondary">gulp serve</span> compila todo y levanta el server de browsersync (para desarrollo)</div>
+                <div class="pl-5"><span class="badge badge-secondary">gulp build</span> compila todo para producción (minificado y uglificado)</div>
+                <div class="pl-5"><span class="badge badge-secondary">gulp build:dev</span> compila todo para desarrollo (sin minificar ni uglificar). No levanta browserSync.</div>
+            </div>
+        </div>
+        <div class="last">
+            $> Hello, 
+            <span id="greetings">world</span>
+        </div>
+    </div>
+
+    <!-- bundle.js es el bundle generado por webpack, solo existirá al compilar los ts-->
+    <script type="text/javascript" src="./js/bundle.js"></script>
+</body>
+</html>
